@@ -3,9 +3,7 @@ set nocompatible " Should be first line in this file
 " Plug-ins
 call plug#begin('~/.vim/plugged')
     " Color-schemes
-    Plug 'NLKNguyen/papercolor-theme' " PaperColor color-scheme
     Plug 'zacanger/angr.vim' " Angr color-scheme
-    Plug 'jackcogdill/palenight.vim' " Palenight color-scheme
 
     " Status bar
     Plug 'vim-airline/vim-airline' " Airline status bar
@@ -16,19 +14,18 @@ call plug#begin('~/.vim/plugged')
     Plug 'Xuyuanp/nerdtree-git-plugin' " GitHub integration for the file navigation
 
     " Editing
-    Plug 'Raimondi/delimitMate' " Auto-complete parenthesis
-    Plug 'luochen1990/rainbow' " Rainbow parenthesis
+    Plug 'Raimondi/delimitMate' " Auto-complete parentheses
 call plug#end()
 
 " Coloring
 let g:airline_theme='onedark'
 color angr
 highlight LineNr ctermfg=darkgrey ctermbg=NONE
-if version >= 700
-  hi SpellBad   guisp=red    gui=undercurl guifg=NONE guibg=NONE ctermfg=red ctermbg=NONE term=underline cterm=underline
-  hi SpellCap   guisp=yellow gui=undercurl guifg=NONE guibg=NONE ctermfg=yellow ctermbg=NONE term=underline cterm=underline
-  hi SpellRare  guisp=blue   gui=undercurl guifg=NONE guibg=NONE ctermfg=yellow ctermbg=NONE term=underline cterm=underline
-  hi SpellLocal guisp=orange gui=undercurl guifg=NONE guibg=NONE ctermfg=yellow ctermbg=NONE term=underline cterm=underline
+if version >= 700 " Change spell highlighting to an underline
+    hi SpellBad   guisp=red    gui=undercurl guifg=NONE guibg=NONE ctermfg=red    ctermbg=NONE term=underline cterm=underline
+    hi SpellCap   guisp=yellow gui=undercurl guifg=NONE guibg=NONE ctermfg=yellow ctermbg=NONE term=underline cterm=underline
+    hi SpellRare  guisp=blue   gui=undercurl guifg=NONE guibg=NONE ctermfg=yellow ctermbg=NONE term=underline cterm=underline
+    hi SpellLocal guisp=orange gui=undercurl guifg=NONE guibg=NONE ctermfg=yellow ctermbg=NONE term=underline cterm=underline
 endif
 
 " Display
@@ -45,7 +42,7 @@ set splitbelow " Split to the bottom
 " Text
 set encoding=utf-8 " Encoding
 set nowrap " Do not wrap lines
-set showmatch " Show matching parenthesis
+set showmatch " Show matching parentheses
 set spell spelllang=en_us " Turn on spelling
 
 " Menu & Searching
