@@ -30,7 +30,7 @@ endif
 
 " Display
 set nu " Show line numbers
-set laststatus=0 " Always display status line
+set showcmd " Show command
 
 " Windows
 set splitright " Split to the right
