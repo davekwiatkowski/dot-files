@@ -30,10 +30,7 @@ endif
 
 " Display
 set nu " Show line numbers
-set ruler " Show file stats
-set showmode " Display current mode
-set showcmd " Display current command
-set laststatus=2 " Always display status line
+set laststatus=0 " Always display status line
 
 " Windows
 set splitright " Split to the right
