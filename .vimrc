@@ -2,19 +2,34 @@ set nocompatible " Should be first line in this file
 
 " Plug-ins
 call plug#begin('~/.vim/plugged')
+    " Color-schemes
     Plug 'NLKNguyen/papercolor-theme' " PaperColor color-scheme
-    Plug 'zacanger/angr.vim'
-    Plug 'vim-airline/vim-airline' " Airline tool-bar
-    Plug 'vim-airline/vim-airline-themes' " Airline tool-bar themes
+    Plug 'zacanger/angr.vim' " Angr color-scheme
+    Plug 'jackcogdill/palenight.vim' " Palenight color-scheme
+
+    " Status bar
+    Plug 'vim-airline/vim-airline' " Airline status bar
+    Plug 'vim-airline/vim-airline-themes' " Airline status bar themes
+
+    " Navigation
     Plug 'scrooloose/nerdtree' " File navigation
     Plug 'Xuyuanp/nerdtree-git-plugin' " GitHub integration for the file navigation
+
+    " Editing
+    Plug 'Raimondi/delimitMate' " Auto-complete parenthesis
+    Plug 'luochen1990/rainbow' " Rainbow parenthesis
 call plug#end()
 
-" Color-scheme
-set t_Co=256
-let g:airline_theme='wombat'
+" Coloring
+let g:airline_theme='onedark'
 color angr
 highlight LineNr ctermfg=darkgrey ctermbg=NONE
+if version >= 700
+  hi SpellBad   guisp=red    gui=undercurl guifg=NONE guibg=NONE ctermfg=red ctermbg=NONE term=underline cterm=underline
+  hi SpellCap   guisp=yellow gui=undercurl guifg=NONE guibg=NONE ctermfg=yellow ctermbg=NONE term=underline cterm=underline
+  hi SpellRare  guisp=blue   gui=undercurl guifg=NONE guibg=NONE ctermfg=yellow ctermbg=NONE term=underline cterm=underline
+  hi SpellLocal guisp=orange gui=undercurl guifg=NONE guibg=NONE ctermfg=yellow ctermbg=NONE term=underline cterm=underline
+endif
 
 " Display
 set nu " Show line numbers
@@ -35,7 +50,6 @@ set spell spelllang=en_us " Turn on spelling
 
 " Menu & Searching
 set wildmenu " Second tab will complete to first full match and open wild-menu
-" set wildmode=longest:list,full " First tab will complete to longest string and show match list
 set autochdir " Set directory to current file's directory
 set incsearch " Show search matches as you type
 set hlsearch " Highlight search terms
@@ -68,7 +82,7 @@ set noerrorbells novisualbell " Do not beep
 set timeoutlen=1000 " Mapping delays
 set ttimeoutlen=0 " Key code delays
 
-" Remove all trailing whitespace by pressing F5
+" Remove all trailing white-space by pressing F5
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 " Screen drawing
