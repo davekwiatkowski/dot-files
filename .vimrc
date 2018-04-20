@@ -42,6 +42,7 @@ set encoding=utf-8 " Encoding
 set nowrap " Do not wrap lines
 set showmatch " Show matching parentheses
 set spell spelllang=en_us " Turn on spelling
+hi Comment cterm=italic
 
 " Menu & Searching
 set wildmenu " Second tab will complete to first full match and open wild-menu
