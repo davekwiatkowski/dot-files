@@ -18,6 +18,7 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 " Coloring
+set t_Co=256 " Enable 256 colors
 let g:airline_theme='onedark'
 color angr
 highlight LineNr ctermfg=darkgrey ctermbg=NONE
