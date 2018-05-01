@@ -25,7 +25,7 @@ call plug#end()
 set t_Co=256 " Enable 256 colors
 let g:airline_theme='onedark'
 color panda
-highlight LineNr ctermfg=darkgrey ctermbg=NONE
+hi LineNr ctermbg=NONE
 if version >= 700 " Change spell highlighting to an underline
     hi SpellBad   guisp=red    gui=undercurl guifg=NONE guibg=NONE ctermfg=red    ctermbg=NONE term=underline cterm=underline
     hi SpellCap   guisp=yellow gui=undercurl guifg=NONE guibg=NONE ctermfg=yellow ctermbg=NONE term=underline cterm=underline
