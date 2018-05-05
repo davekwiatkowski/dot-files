@@ -23,6 +23,7 @@ call plug#end()
 " Coloring
 set t_Co=256 " Enable 256 colors
 let g:airline_theme='solarized'
+set background=dark
 color solarized
 hi LineNr ctermbg=NONE
 if version >= 700 " Change spell highlighting to an underline
