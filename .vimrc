@@ -26,12 +26,7 @@ let g:airline_theme='solarized'
 set background=dark
 color solarized
 hi LineNr ctermbg=NONE
-if version >= 700 " Change spell highlighting to an underline
-    hi SpellBad   guisp=red    gui=undercurl guifg=NONE guibg=NONE ctermfg=red    ctermbg=NONE term=underline cterm=underline
-    hi SpellCap   guisp=yellow gui=undercurl guifg=NONE guibg=NONE ctermfg=yellow ctermbg=NONE term=underline cterm=underline
-    hi SpellRare  guisp=blue   gui=undercurl guifg=NONE guibg=NONE ctermfg=yellow ctermbg=NONE term=underline cterm=underline
-    hi SpellLocal guisp=orange gui=undercurl guifg=NONE guibg=NONE ctermfg=yellow ctermbg=NONE term=underline cterm=underline
-endif
+hi Normal ctermbg=NONE
 
 " Display
 set nu " Show line numbers
