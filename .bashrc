@@ -22,13 +22,13 @@ function settitle() {
 eval `dircolors ~/.dir_colors`
 
 # Set prompt and window title
-jobs_color="[0;32m"
+jobs_color="[0;33m"
 hostname_color="[1;34m"
 cwd_color="[0;36m"
 input_color="[0;37m"
 PROMPT_COMMAND="settitle; get_hostname; history -a;"
 export PS1="\[\e${jobs_color}\]\j \
-\[\e${hostname_color}\]\u@\H:\
+\[\e${hostname_color}\]\u@\h:\
 \[\e${cwd_color}\e[3m\]\w\
 \[\e${input_color}\] "
 
