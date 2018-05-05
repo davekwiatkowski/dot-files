@@ -27,3 +27,7 @@ Columns=160
 Rows=40
 CursorBlinks=no
 Scrollbar=none
+Locale=
+Charset=
+BellType=0
+BellTaskbar=no

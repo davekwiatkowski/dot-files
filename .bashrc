@@ -12,16 +12,6 @@ function get_hostname {
     export SHORTNAME=${HOSTNAME}
 }
 
-function user_color {
-    id | grep "Admin" > /dev/null
-    RETVAL=$?
-    if [[ $RETVAL == 0 ]]; then
-        usercolor="[0;32m";
-    else
-        usercolor="[0;35m";
-    fi
-}
-
 function settitle() {
     u=${USERNAME}
     h="$u@${HOSTNAME}"
@@ -32,15 +22,16 @@ function settitle() {
 eval `dircolors ~/.dir_colors`
 
 # Set prompt and window title
-user_color
-cwd_color='[0;34m'
-hostname_color='[1;32m'
-input_color='[0;37m'
-PROMPT_COMMAND='settitle; get_hostname; history -a;'
-export PS1='\[\e${usercolor}\]\u\[\e${hostname_color}\]@\H\[\e${input_color}\]:\[\e${cwd_color}\e[3m\]\w\[\e${input_color}\]$ '
+hostname_color="[1;34m"
+cwd_color="[0;36m"
+input_color="[0;37m"
+PROMPT_COMMAND="settitle; get_hostname; history -a;"
+export PS1="\[\e${hostname_color}\]\u@\H:\
+\[\e${cwd_color}\e[3m\]\w\
+\[\e${input_color}\] "
 
 # Aliases
-alias ls='ls -l --color'
-alias grep='grep -n --color'
-alias rl='ssh dave1@rlogin.cs.vt.edu'
-alias portal='ssh dave1@portal.cs.vt.edu'
+alias ls="ls -l --color"
+alias grep="grep -n --color"
+alias rl="ssh dave1@rlogin.cs.vt.edu"
+alias portal="ssh dave1@portal.cs.vt.edu"
