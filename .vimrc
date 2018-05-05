@@ -3,7 +3,7 @@ set nocompatible " Should be first line in this file
 " Plug-ins
 call plug#begin('~/.vim/plugged')
     " Color-schemes
-    Plug 'zacanger/angr.vim' " Angr color-scheme
+    Plug 'altercation/vim-colors-solarized' " Solarized color-scheme
 
     " Status bar
     Plug 'vim-airline/vim-airline' " Airline status bar
@@ -22,8 +22,8 @@ call plug#end()
 
 " Coloring
 set t_Co=256 " Enable 256 colors
-let g:airline_theme='onedark'
-color angr
+let g:airline_theme='solarized'
+color solarized
 hi LineNr ctermbg=NONE
 if version >= 700 " Change spell highlighting to an underline
     hi SpellBad   guisp=red    gui=undercurl guifg=NONE guibg=NONE ctermfg=red    ctermbg=NONE term=underline cterm=underline
