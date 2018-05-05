@@ -18,7 +18,7 @@ function user_color {
     if [[ $RETVAL == 0 ]]; then
         usercolor="[0;32m";
     else
-        usercolor="[0;32m";
+        usercolor="[0;35m";
     fi
 }
 
@@ -33,11 +33,11 @@ eval `dircolors ~/.dir_colors`
 
 # Set prompt and window title
 user_color
-input_color='[0;37m'
 cwd_color='[0;34m'
-hostname_color='[1;31m'
+hostname_color='[1;32m'
+input_color='[0;37m'
 PROMPT_COMMAND='settitle; get_hostname; history -a;'
-export PS1='\[\e${usercolor}\]\u\[\e${hostname_color}\]@\H:\[\e${cwd_color}\]\w\[\e${input_color}\]$ '
+export PS1='\[\e${cwd_color}\e[3m\]\w\n\[\e${usercolor}\]\u\[\e${hostname_color}\]@\H\[\e${input_color}\]$ '
 
 # Aliases
 alias ls='ls -l --color'
