@@ -22,8 +22,8 @@ function settitle() {
 eval `dircolors ~/.dir_colors`
 
 # Set prompt and window title
-jobs_color="[0;33m"
-hostname_color="[1;34m"
+jobs_color="[0;32m"
+hostname_color="[1;35m"
 cwd_color="[0;36m"
 input_color="[0;37m"
 PROMPT_COMMAND="settitle; get_hostname; history -a;"

@@ -3,7 +3,7 @@ set nocompatible " Should be first line in this file
 " Plug-ins
 call plug#begin('~/.vim/plugged')
     " Color-schemes
-    Plug 'altercation/vim-colors-solarized' " Solarized color-scheme
+    Plug 'jackcogdill/palenight.vim' " Palenight color-scheme
 
     " Status bar
     Plug 'vim-airline/vim-airline' " Airline status bar
@@ -22,11 +22,14 @@ call plug#end()
 
 " Coloring
 set t_Co=256 " Enable 256 colors
-let g:airline_theme='solarized'
+syntax enable
 set background=dark
-color solarized
+color palenight
 hi LineNr ctermbg=NONE
 hi Normal ctermbg=NONE
+
+" Airline configuration
+let g:airline_theme='base16_atelierdune'
 
 " Display
 set nu " Show line numbers
