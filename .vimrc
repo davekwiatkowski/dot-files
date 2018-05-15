@@ -14,7 +14,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'Xuyuanp/nerdtree-git-plugin' " GitHub integration for the file navigation
 
     " Language Support
-    Plug 'othree/yajs.vim' " JavaScript highlighting
+    Plug 'pangloss/vim-javascript' " JavaScript highlighting
+    Plug 'mxw/vim-jsx' " JSX highlighting
 
     " Editing
     Plug 'Raimondi/delimitMate' " Auto-complete parentheses
