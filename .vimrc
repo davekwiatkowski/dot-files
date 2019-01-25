@@ -62,9 +62,9 @@ set undolevels=500 " Have a lot of undo levels
 " White space
 set autoindent " Auto-indent everywhere
 set copyindent " Copy previous indentation when auto-indenting
-set tabstop=4 " Make a tab 4 spaces
-set softtabstop=4 " Make 4 columns for tabs in insert mode
-set shiftwidth=4 " 4 spaces when auto-indenting
+set tabstop=2 " Make a tab 4 spaces
+set softtabstop=2 " Make 4 columns for tabs in insert mode
+set shiftwidth=2 " 4 spaces when auto-indenting
 set smarttab " Insert tabs on the start of a line according to shift-width, not tab-stop
 set smartindent " Indent correctly (usually)
 set shiftround " Use multiple of shift-width when indenting with '<' and '>'
