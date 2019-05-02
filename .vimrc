@@ -30,7 +30,7 @@ hi LineNr ctermbg=NONE
 hi Normal ctermbg=NONE
 
 " Airline configuration
-let g:airline_theme='base16_atelierdune'
+let g:airline_theme='raven'
 
 " Display
 set nu " Show line numbers
