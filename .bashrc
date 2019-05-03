@@ -22,8 +22,8 @@ eval `dircolors ~/.dir_colors`
 
 # Setup information colors
 jobs_color='[0;31m'
-hostname_color='[1;32m'
-cwd_color='[0;35m'
+hostname_color='[1;37m'
+cwd_color='[0;34m'
 input_color='[0;38m'
 
 # Set prompt and window title
@@ -35,7 +35,6 @@ export PS1="\[\e${jobs_color}\]\j \
 \[\e${input_color}\] "
 
 # Aliases
-alias ls='ls -l --color'
 alias grep='grep -n --color'
 alias rl='ssh dave1@rlogin.cs.vt.edu'
 alias portal='ssh dave1@portal.cs.vt.edu'

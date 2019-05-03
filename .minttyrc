@@ -8,7 +8,7 @@ Yellow          =255,204,0
 Green           =76,217,100
 Cyan            =90,200,250
 Blue            =0,122,255
-Magenta         =88,86,214
+Magenta         =255,45,85
 
 BoldAsFont      =yes
 Term            =xterm-256color
