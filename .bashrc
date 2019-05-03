@@ -21,10 +21,10 @@ settitle() {
 eval `dircolors ~/.dir_colors`
 
 # Setup information colors
-jobs_color='[0;32m'
-hostname_color='[1;35m'
-cwd_color='[0;36m'
-input_color='[0;37m'
+jobs_color='[0;31m'
+hostname_color='[1;32m'
+cwd_color='[0;35m'
+input_color='[0;38m'
 
 # Set prompt and window title
 short_cwd='$(sed "s:\([^/\.]\)[^/]*/:\1/:g" <<< ${PWD/#$HOME/\~})'
